@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test web</title>
+		
+		<!-- VUEJS -->
+		<script src="js/vue"></script>
+		
+		<!-- Buefy CSS -->
+		<link rel="stylesheet" href="css/buefy.min" >
+
+		<!-- Buefy JavaScript -->
+		<script src="https://unpkg.com/buefy"></script>
+		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		
+		<!-- icons -->
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
+		
+    </head>
+ 
+    <body>
+	
+	<div id="app" class="container">
+            <template>
+                    <div class="content">
+                      <tree :tree-data="tree"></tree>
+                    </div>
+                  </template>
+                  
+
+
+    <section>
+        <b-table
+            :data="data"
+        >
+
+            <template slot-scope="props">
+                <b-table-column field="key" label="Key" sortable>
+                    {{ props.row.key }}
+                </b-table-column>
+
+                <b-table-column field="value" label="Value" sortable>
+                        {{ props.row.value }}
+                </b-table-column>
+
+            </template>
+
+        </b-table>
+    </section>
+
+</div>
+
+
+
+
+<script src="js/application"></script>
+    </body>
+</html>
