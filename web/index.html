@@ -18,37 +18,15 @@
 		<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
 		
     </head>
- 
+    
     <body>
 	
 	<div id="app" class="container">
             <template>
-                    <div class="content">
-                      <tree :tree-data="tree"></tree>
-                    </div>
-                  </template>
-                  
-
-
-    <section>
-        <b-table
-            :data="data"
-        >
-
-            <template slot-scope="props">
-                <b-table-column field="key" label="Key" sortable>
-                    {{ props.row.key }}
-                </b-table-column>
-
-                <b-table-column field="value" label="Value" sortable>
-                        {{ props.row.value }}
-                </b-table-column>
-
+                <div class="content">
+                    <tree :tree-data="tree"></tree>
+                </div>
             </template>
-
-        </b-table>
-    </section>
-
 </div>
 
 
