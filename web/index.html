@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
 		
     </head>
-    
+
     <body>
 	
 	<div id="app" class="container">
@@ -27,6 +27,14 @@
                     <tree :tree-data="tree"></tree>
                 </div>
             </template>
+
+
+
+            <template>
+                    <div class="content">
+                        <tree :tree-data="customTree()"></tree>
+                    </div>
+                </template>
 </div>
 
 
