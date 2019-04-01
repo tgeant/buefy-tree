@@ -29,11 +29,10 @@ Vue.component('node-tree', {
               <p class="control">{{ node.label }}</p>
               <p class="control">
               <div v-if="node.children && Array.isArray(node.children)">
-                <b-collapse :open="false" aria-id="contentIdForA11y1">
+                <b-collapse :open="node.isOpen">
                   <button
                   class="button is-primary is-small"
                   slot="trigger"
-                  aria-controls="contentIdForA11y1"
                   @click="node.isOpen = !node.isOpen">{{ node.isOpen? '-' : '+' }}</button>
                     <ul v-if="node.children.length">
                         <node-tree v-for="child in node.children" :node="child"></node-tree>
